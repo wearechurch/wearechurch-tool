@@ -7,6 +7,7 @@ import com.wearechurch.tool.enumerator.Reply;
 @JsonInclude(value = Include.NON_EMPTY)
 public class Response {
 	private Integer code;
+	private String application;
 	private String message;
 
 	public Response() {
@@ -17,12 +18,20 @@ public class Response {
 		message = reply.getMessage();
 	}
 
+	public String getApplication() {
+		return application;
+	}
+
 	public Integer getCode() {
 		return code;
 	}
 
 	public String getMessage() {
 		return message;
+	}
+
+	public void setApplication(final String application) {
+		this.application = application;
 	}
 
 	public void setCode(final Integer code) {
