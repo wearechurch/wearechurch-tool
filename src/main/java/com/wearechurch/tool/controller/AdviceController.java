@@ -2,6 +2,7 @@ package com.wearechurch.tool.controller;
 
 import java.net.ConnectException;
 import java.net.UnknownHostException;
+import java.util.NoSuchElementException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -86,6 +87,11 @@ public class AdviceController {
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<Response> methodArgumentNotValidException(final MethodArgumentNotValidException exception) {
 		return buildResponse(exception, Reply.METHOD_ARGUMENT);
+	}
+
+	@ExceptionHandler(NoSuchElementException.class)
+	public ResponseEntity<Response> noSuchElementException(final NoSuchElementException exception) {
+		return buildResponse(exception, Reply.SUCH_ELEMENT);
 	}
 
 	@ExceptionHandler(NotSslRecordException.class)

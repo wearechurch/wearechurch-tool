@@ -1,6 +1,7 @@
 package com.wearechurch.tool.enumerator;
 
 public enum Reply {
+
 	OK(0, "OK"),
 
 	EXCEPTION(5, "Tenemos un problema interno, intentalo más tarde."),
@@ -22,6 +23,8 @@ public enum Reply {
 	UNKNOWN_HOST(105, "No se pudo determinar la dirección IP de un host"),
 
 	NULL_POINTER(108, "Se intenta usar <null> en un caso donde se requiere un objeto."),
+
+	SUCH_ELEMENT(176, "No hay más elementos en la enumeración."),
 
 	CLIENT_RESPONSE(204, "Se contienen datos de respuesta HTTP reales."),
 
